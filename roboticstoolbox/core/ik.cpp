@@ -141,13 +141,13 @@ extern "C"
             _rand_q(ets, q);
         }
 
-        free(np_e);
-        free(np_Te);
-        free(np_J);
+        PyMem_RawFree(np_e);
+        PyMem_RawFree(np_Te);
+        PyMem_RawFree(np_J);
 
         if (use_pinv)
         {
-            free(np_pinv);
+            PyMem_RawFree(np_pinv);
         }
     }
 
@@ -275,13 +275,13 @@ extern "C"
             _rand_q(ets, q);
         }
 
-        free(np_e);
-        free(np_Te);
-        free(np_J);
+        PyMem_RawFree(np_e);
+        PyMem_RawFree(np_Te);
+        PyMem_RawFree(np_J);
 
         if (use_pinv)
         {
-            free(np_J_pinv);
+            PyMem_RawFree(np_J_pinv);
         }
     }
 
@@ -398,9 +398,9 @@ extern "C"
             _rand_q(ets, q);
         }
 
-        free(np_e);
-        free(np_Te);
-        free(np_J);
+        PyMem_RawFree(np_e);
+        PyMem_RawFree(np_Te);
+        PyMem_RawFree(np_J);
     }
 
     void _IK_LM_Wampler(
@@ -509,9 +509,9 @@ extern "C"
             _rand_q(ets, q);
         }
 
-        free(np_e);
-        free(np_Te);
-        free(np_J);
+        PyMem_RawFree(np_e);
+        PyMem_RawFree(np_Te);
+        PyMem_RawFree(np_J);
     }
 
     void _IK_LM_Sugihara(
@@ -624,9 +624,9 @@ extern "C"
             _rand_q(ets, q);
         }
 
-        free(np_e);
-        free(np_Te);
-        free(np_J);
+        PyMem_RawFree(np_e);
+        PyMem_RawFree(np_Te);
+        PyMem_RawFree(np_J);
     }
 
     void _pseudo_inverse(Eigen::Map<Eigen::MatrixXd> J, Eigen::Map<Eigen::MatrixXd> J_pinv, double damping)
